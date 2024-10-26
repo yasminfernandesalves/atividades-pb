@@ -1,0 +1,17 @@
+Data e hora do SO: 2024/10/26 15:27
+Data do primeiro registro de venda: 31/10/2023
+Data do último registro de venda: 30/12/2023
+Quantidade de itens diferentes: 61
+
+10 primeiras linhas do documento:
+id,produto,quantidade,preço,data
+222,programa de masterização,4,200.00,31/10/2023
+223,pedais de pitch shifter,3,400.00,01/11/2023
+224,kit de gravação para home studio,2,1200.00,02/11/2023
+225,suporte para estúdio,6,100.00,03/11/2023
+226,microfone direcional,5,250.00,04/11/2023
+227,sistema de som surround,2,1500.00,05/11/2023
+228,mesa de som para gravação,4,2200.00,06/11/2023
+229,cabo de som RCA,3,30.00,07/11/2023
+230,pedais de volume,2,150.00,08/11/2023
+231,microfone para gravação de voz,1,600.00,09/11/2023

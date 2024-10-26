@@ -1,0 +1,17 @@
+Data e hora do SO: 2024/10/25 15:27
+Data do primeiro registro de venda: 07/06/2023 
+Data do último registro de venda: 18/09/2023 
+Quantidade de itens diferentes: 66
+
+10 primeiras linhas do documento:
+id,produto,quantidade,preço,data
+156,pedestal de altura ajustável,6,90.00,07/06/2023 
+157,interface MIDI,3,120.00,08/06/2023
+158,suporte para fones de ouvido,8,50.00,09/06/2023 
+159,kit de performance ao vivo,2,1100.00,10/06/2023
+160,estante de gravação,3,400.00,11/06/2023
+161,microfone direcional,3,250.00,31/08/2023 
+162,suporte para bateria,2,300.00,01/09/2023 
+163,pedais de modulação,5,450.00,02/09/2023 
+164,cabo de extensão,6,20.00,03/09/2023 
+165,livro de técnicas musicais,4,25.00,04/09/2023 

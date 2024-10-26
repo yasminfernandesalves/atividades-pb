@@ -1,0 +1,17 @@
+Data e hora do SO: 2024/10/24 15:31
+Data do primeiro registro de venda: 01/04/2023
+Data do último registro de venda: 06/06/2023
+Quantidade de itens diferentes: 67
+
+10 primeiras linhas do documento:
+id,produto,quantidade,preço,data
+89,mesa de som digital,2,1500.00,01/04/2023
+90,consola de DJ,3,2500.00,02/04/2023
+91,caixa de som portátil,5,399.00,03/04/2023
+92,iluminação LED,4,350.00,04/04/2023
+93,estúdio de gravação,1,12000.00,05/04/2023
+94,softwares de edição de áudio,6,250.00,06/04/2023
+95,filtro de pop,10,85.00,07/04/2023
+96,monitor de estúdio,3,1200.00,08/04/2023
+97,pedal de efeito,4,250.00,09/04/2023
+98,suporte para teclado,5,150.00,10/04/2023
