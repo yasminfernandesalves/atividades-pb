@@ -4,15 +4,15 @@
 
 ## Apresentação
 
-![Minha foto Alt](../trainee-repo-template/foto-apresentacao.jpg)
+![Minha foto Alt](/foto%20perfil.jpg)
 
 - **Localização**: Guarujá - SP, Brasil.
 - **Instituição de ensino**: UNIVESP (Universidade Virtual do Estado de São Paulo).
 - **Curso**: T.I (Tecnologia da Informação).
 - **Semestre**: 3º semestre.
 - **Experiência**: Professora de Inglês kids (11 meses); Assistente admintrstivo portuário (10 meses).
-- Conhecimentos: Python.
-- Hobbies: desenhar, pintar e cozinhar.
+- **Conhecimentos**: Python.
+- **Hobbies**: desenhar, pintar e cozinhar.
 
 
 
