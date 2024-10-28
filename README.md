@@ -4,7 +4,7 @@
 
 ## Apresentação
 
-![Minha foto Alt](../trainee-repo-template/Sprint%201/Evidencias/foto-apresentacao.jpg)
+![Minha foto Alt](../trainee-repo-template/foto-apresentacao.jpg)
 
 - **Localização**: Guarujá - SP, Brasil.
 - **Instituição de ensino**: UNIVESP (Universidade Virtual do Estado de São Paulo).

@@ -50,12 +50,10 @@ DESAFIO:
 
     | Dia | Relatórios Gerados| Arquivo compactado |
     |---|----|----|
-    | 1 | [Relatório 23-10-2024](../Evidencias/relatorio-20241023.txt) | [Backup 23-10-2024](../Evidencias/backup-dados-20241023.zip) |
-    | 2 | [Relatório 24-10-2024](../Evidencias/relatorio-20241024.txt) | [Backup 24-10-2024](../Evidencias/backup-dados-20241024.zip) |
-    | 3 | [Relatório 25-10-2024](../Evidencias/relatorio-20241025.txt) | [Backup 25-10-2024](../Evidencias/backup-dados-20241025.zip) |
-    | 4 | [Relatório 26-10-2024](../Evidencias/relatorio-20241026.txt) | [Backup 26-10-2024](../Evidencias/backup-dados-20241026.zip) |
-
-
+    | 1 | [Relatório 23-10-2024](../Sprint%201/Evidencias/relatorio-20241023.txt) | [Backup 23-10-2024](../Sprint%201/Evidencias/backup-dados-20241023.zip) |
+    | 2 | [Relatório 24-10-2024](../Sprint%201/Evidencias/relatorio-20241024.txt) | [Backup 24-10-2024](../Sprint%201/Evidencias/backup-dados-20241024.zip) |
+    | 3 | [Relatório 25-10-2024](../Sprint%201/Evidencias/relatorio-20241025.txt) | [Backup 25-10-2024](../Sprint%201/Evidencias/backup-dados-20241025.zip) |
+    | 4 | [Relatório 26-10-2024](../Sprint%201/Evidencias/relatorio-20241026.txt) | [Backup 26-10-2024](../Sprint%201/Evidencias/backup-dados-20241026.zip) |
 
 - [Etapa II](../Sprint%201/Desafio/etapa-2/consolidador_de_processamento_de_vendas.sh) - Ao excutar a segunda parte, Script 2, foi obtido a conclusão do desafio:
      - [Relatório Final](../Sprint%201/Evidencias/relatorio_final.txt)
