@@ -1,6 +1,6 @@
 # Objetivo do desafio
 
-Objetivo: prática de conhecimento de modelagem de dados relacionais e dimencionais. Dividido em duas etapas e entrgáveis
+Objetivo: prática de conhecimento de modelagem de dados relacional e dimencional. Dividido em duas etapas e entrgáveis
 - Normalização do banco de dados e diagrama da modelagem relacional;
 - Realizar a modelagem dimencional baseada na relacional e criar um diagrama dela.
 
@@ -10,7 +10,7 @@ Objetivo: prática de conhecimento de modelagem de dados relacionais e dimencion
 
 ### **Preparação**:
 
-- Baixei o arquivo concessionaria.sqlite
+- Baixei o arquivo "concessionaria.sqlite"
 
 - Utilizei o Dbeaver (cliente SQL) para fazer os exercícios e o desafio, como indicado
 
@@ -24,15 +24,15 @@ ___
 
 **Normalização e tratamento dos dados**
 
-Assim que consultei a tabela completa e analizei as colunas notei que havia uma inconsistência nas datas:
+Assim que consultei a tabela completa e analizei as colunas, notei que havia uma inconsistência nas datas:
 
 ![datas](../Evidencias/datas-inconsistentes.png)
 
-primeiramente eu decidi habilitar a vizualização original do banco de dados para obter as data no formato YYYYMMDD:
+primeiramente, decidi habilitar a vizualização original do banco de dados para obter as data no formato YYYYMMDD:
 
 ![vizualização das datas](../Evidencias/visu-datas.png)
 
-e então criei uma query para alterar a formatação das datas para YYYY-MM-DD usando o comando UPDATE para atualizar a tabela, e o comando SUBSTRING para manipular as strings:
+e então criei uma query para alterar a formatação das datas para YYYY-MM-DD usando o comando UPDATE para atualizar a tabela, e o comando SUBSTRING para manipular as strings e adicionar os hífens:
 
 ```sql
 UPDATE tb_locacao_antiga 
@@ -42,11 +42,11 @@ SET dataLocacao = SUBSTRING(dataLocacao, 1, 4) || '-' || SUBSTRING(dataLocacao, 
 
 [...]
 
-Mais a frente, também notei que alguns carros possuíam mais de um valor de kilometragem, o que estava causando algumas dificuldades no momento de criação das novas tabelas. Para melhorar isso, no momento da inserção dos dados na nova tabela, decidi filtrar e utilizar somente o maior valor de km de cada carro, para não haver mais repetições de informações na tabela.
+Mais a frente, também notei que os carros possuíam mais de um valor de kilometragem, o que estava causando algumas dificuldades no momento de criação das novas tabelas. Para melhorar isso, no momento da inserção dos dados na nova tabela, decidi filtrar e utilizar somente o maior valor de km de cada carro, para não haver mais repetições de informações.
 
 [...]
 
-No momento da segunda etapa da normalização (fn2) seria necessário segregar a tabela locação antiga, então decidi dividi-la a partir dos id's de identificação das entidades (ex: carro, combustível, cliente, vendedor) e relacioná-las utilizando chaves estrangeiras (fk) na tabela locação.
+No momento da segunda etapa da normalização (fn2) seria necessário segregar a tabela locação antiga, então decidi dividi-la a partir dos id's de identificação como chave primária (pk) das entidades (ex: carro, combustível, cliente, vendedor) e relacioná-las utilizando chaves estrangeiras (fk) na tabela locação.
 
 [...]
 
@@ -60,7 +60,8 @@ PRAGMA foreign_keys = ON;
 ```
 
 
-e então iniciei a criação das tabelas por entidade, utilizando o id como chave primária e identificador. Criação da tabela vendedor e inserindo os atributos dessa entidade:
+e então iniciei a criação das tabelas por entidade, utilizando o id como chave primária e identificador. 
+Criação da tabela vendedor e inserindo os atributos dessa entidade:
 ```sql
 CREATE TABLE IF NOT EXISTS tb_Vendedor (
    idVendedor INT PRIMARY KEY,
@@ -71,7 +72,8 @@ CREATE TABLE IF NOT EXISTS tb_Vendedor (
 ```
 
 
-utilizei o comando IF NOT EXIST na criação das tabelas para garantir que não se repetisse, caso essa ação já tivesse sido realizada. Criando a tabela cliente utilizado o id como chave primária:
+utilizei o comando IF NOT EXIST na criação das tabelas para garantir que não se repetisse caso essa ação já tivesse sido realizada. 
+Criando a tabela cliente utilizado o id como chave primária:
 ```sql
 CREATE TABLE IF NOT EXISTS tb_Cliente (
    idCliente INT PRIMARY KEY,
@@ -84,7 +86,7 @@ CREATE TABLE IF NOT EXISTS tb_Cliente (
 ```
 
 
-originalmente, pensei em juntar essa tabela combustível com o carro, porém após pensar em dividir as entidades baseadas no id, decidi manter um padrão e separar o carro e combustível em tabelas distintas
+originalmente, pensei em juntar essa tabela combustível com o carro, porém após pensar em dividir as entidades baseadas nos ids, decidi manter o padrão e separar o carro e combustível
 ```sql
 CREATE TABLE IF NOT EXISTS tb_Combustivel (
    idCombustivel INT PRIMARY KEY,
@@ -153,7 +155,7 @@ FROM tb_locacao_antiga
 WHERE idcombustivel IS NOT NULL;
 ```
 
-inserindo dados na tabela carro. Como citei anteriormente, havia um problema com as kilometragens repetidas, então inseri uma condição em que mantem somente o registro mais recente de cada carro, baseado no seu id
+inserindo dados na tabela carro. Como citei anteriormente, havia um problema com as kilometragens repetidas, então adicionei uma condição em que mantem somente o registro mais recente de cada carro, baseado no seu id
 
 ```sql
 INSERT INTO tb_Carro (idCarro, idCombustivel, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro)

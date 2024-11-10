@@ -50,81 +50,97 @@ Além do conteúdo do cuso, procurei complementar alguns conhecimento por fora p
 # Evidências
 
 - Na realização do primeiro exercício obtive o resultado:
+
 ![ex.1](../Sprint%202/Evidencias/evi-ex1.png)
 
 [...]
 
 - execução da query do exercício 2 obtive esse resultado:
+
 ![ex.2](../Sprint%202/Evidencias/evi-ex2.png)
 
 [...]
 
 - execução da query do exercício 3 obtive esse resultado:
+
 ![ex.3](../Sprint%202/Evidencias/evi-ex3.png)
 
 [...]
 
 - execução da query do exercício 4 obtive esse resultado:
+
 ![ex.4](../Sprint%202/Evidencias/evi-ex4.png)
 
 [...]
 
 - execução da query do exercício 5 obtive esse resultado:
+
 ![ex.5](../Sprint%202/Evidencias/evi-ex5.png)
 
 [...]
 
 - execução da query do exercício 6 obtive esse resultado:
+
 ![ex.6](../Sprint%202/Evidencias/evi-ex6.png)
 
 [...]
 
 - execução da query do exercício 7 obtive esse resultado:
+
 ![ex.7](../Sprint%202/Evidencias/evi-ex7.png)
 
 [...]
 
 - execução da query do exercício 8 obtive esse resultado:
+
 ![ex.8](../Sprint%202/Evidencias/evi-ex8.png)
 
 [...]
 
 - execução da query do exercício 9 obtive esse resultado:
+
 ![ex.9](../Sprint%202/Evidencias/evi-ex9.png)
 
 [...]
 
 - execução da query do exercício 10 obtive esse resultado:
+
 ![ex.10](../Sprint%202/Evidencias/evi-ex10.png)
 
 [...]
 
 - execução da query do exercício 11 obtive esse resultado:
+
 ![ex.11](../Sprint%202/Evidencias/evi-ex11.png)
 
 [...]
 
 - execução da query do exercício 12 obtive esse resultado:
+
 ![ex.12](../Sprint%202/Evidencias/evi-ex12.png)
 
 [...]
 
 - execução da query do exercício 13 obtive esse resultado:
+
 ![ex.13](../Sprint%202/Evidencias/evi-ex13.png)
 
 [...]
 
 - execução da query do exercício 14 obtive esse resultado:
+
 ![ex.14](../Sprint%202/Evidencias/evi-ex14.png)
 
 [...]
 
 - execução da query do exercício 15 obtive esse resultado:
+
 ![ex.15](../Sprint%202/Evidencias/evi-ex15.png)
 
 [...]
 
 - execução da query do exercício 16 obtive esse resultado:
+
 ![ex.16](../Sprint%202/Evidencias/evi-ex16.png)
 
 
