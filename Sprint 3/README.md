@@ -41,7 +41,28 @@ Além desse curso da trilha, busquei conteúdos extras para a realização do de
 
 # Evidências
 
-- Na realização do primeiro exercício obtive o resultado:
+Os exercícios num geral foram tranquilos, apesar da quantidade, somente os de POO foram um pouco mais trabalhosos de elaborar.
+
+-  execução do exercício 21:
+
+![21](../Sprint%203/Exercicios/evidencias/ex21.png)
+
+- execução do exercício 22:
+
+![22](../Sprint%203/Exercicios/evidencias/ex22.png)
+
+- execução do exercício 23:
+
+![23](../Sprint%203/Exercicios/evidencias/ex23.png)
+
+- execução do exercício 24:
+
+![24](../Sprint%203/Exercicios/evidencias/ex24.png)
+
+- execução do exercício 25:
+
+![25](../Sprint%203/Exercicios/evidencias/ex25.png)
+
 
 [...]
 
