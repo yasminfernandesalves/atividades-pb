@@ -40,31 +40,34 @@ Executando os códigos de cada exercício obtive os seguintes resultados:
 
 - Exercício 1
 
-![ex1](../Sprint%204/Exercicios/Evidencias/)
+![ex1](../Sprint%204/Exercicios/Evidencias/ex1.png)
 
 - Exercício 2
 
-![ex2]()
+![ex2](../Sprint%204/Exercicios/Evidencias/ex2.png)
 
 - Exercício 3
 
-![ex3]()
+![ex3](../Sprint%204/Exercicios/Evidencias/ex3.png)
 
 - Exercício 4
 
-![ex4]()
+![ex4](../Sprint%204/Exercicios/Evidencias/ex4.png)
 
 - Exercício 5
 
-![ex5]()
+![ex5](../Sprint%204/Exercicios/Evidencias/ex5.png)
 
 - Exercício 6
 
-![ex6]()
+![ex6](../Sprint%204/Exercicios/Evidencias/ex6.png)
 
 - Exercício 7
 
-![ex7]()
+![ex7](../Sprint%204/Exercicios/Evidencias/ex7.png)
+
+
+[...]
 
 
 # Certificados
