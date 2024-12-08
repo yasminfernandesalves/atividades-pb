@@ -3,15 +3,18 @@
 
 Conteúdo base disponibilizado para nivelar os conhecimento necessários para a resolução do desafio.
 
-**DOCKER** -
+**DOCKER** - No curso, o conteúdo foi bem abrangente, iniciando com conceitos básicos, como: o que é o docker? como ele pode facilitar a vida dos desenvolvedores, o que é uma imagem/ container entre outros, até algums assuntos mais avançados, como: Kubernetes e Swarm.
+
 - Anotações: [notion - Docker](https://www.notion.so/Docker-1499bf04327c80cc9ba9de007aefd48a?pvs=4)
 
 
-**PYTHON** - 
+**PYTHON** - O conteudo foi completamente direcionado a aplicação de python em preogramação funcional, como funções de primeira classe, alta oredem, lambda, map, filter, reduce entre várias outras.
+
 - Anotações: [notion - Python3 [programação funcional]](https://www.notion.so/Python-13b9bf04327c80e4b61edd128ab5c5ad?pvs=4)
 
 
-**AWS** -
+**AWS** - Os conceitos já vistos anteriormente foram bem mais explorados e explicados, além de oferecer um curso mais técnico sobre as ferramentas da AWS.
+
 - Anotações: [notion - AWS Partner Credenciamento](https://www.notion.so/AWS-Partner-Credenciamento-1509bf04327c8083b837d45d884560f6?pvs=4)
 
 
@@ -27,7 +30,7 @@ Conteúdo base disponibilizado para nivelar os conhecimento necessários para a 
 | [Exercício 3](../Sprint%204/Exercicios/ex3.py) | Utilizando lambdas, reduce (módulo functools) e map. |
 | [Exercício 4](../Sprint%204/Exercicios/ex4.py) | Aplicando as funções: max, zip e map. |
 | [Exercício 5](../Sprint%204/Exercicios/ex5.py) | Utilizando lambdas e as funções: round, map e sorted. |
-| [Exercício 6](../Sprint%204/Exercicios/ex6.py) |  |
+| [Exercício 6](../Sprint%204/Exercicios/ex6.py) | Utilizando as funções: filter e lambda. |
 | [Exercício 7](../Sprint%204/Exercicios/ex7.py) | Dando continuidade a função: "def pares_ate(n:int):" |
 
 
@@ -72,6 +75,6 @@ Executando os códigos de cada exercício obtive os seguintes resultados:
 
 # Certificados
 
-[AWS Partner Credenciamento](../Sprint%204/Certificados/AWS_partner-credenciamento.pdf)
+[AWS - Partner Credenciamento](../Sprint%204/Certificados/AWS_partner-credenciamento.pdf)
 
 
