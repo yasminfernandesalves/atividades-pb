@@ -9,6 +9,7 @@ Praticar python com containers docker.
 - respostas para os questionamentos no formato markdown
 - evidências (prints) da execução bem sucedida
 
+
 # Etapas
 
 ### **Preparação**:
@@ -17,11 +18,14 @@ Praticar python com containers docker.
 - criei uma conta no dockerhub;
 - preparei o Vscode baixando as extenções necessárias.
 
+
+[...]
+
 ___
 
 ## 1.  Etapa I
 
-Foi pedido para criar uma imagem docker utilizando o arquivo [carguro.py](../Desafio/etapa-1/carguru.py), que possuí um código que retorna de forma aleatória uma marca de carro da lista. Para a criação dessa imagem criei um arquivo Dockerfile: [Código da imagem](../Desafio/etapa-1/Dockerfile).
+Foi pedido para criar uma imagem docker utilizando o arquivo [carguru.py](../Desafio/etapa-1/carguru.py), que possuí um código que retorna de forma aleatória uma marca de carro da lista. Para a criação dessa imagem criei um arquivo Dockerfile: [Código da imagem](../Desafio/etapa-1/Dockerfile).
 
 [...]
 
@@ -42,14 +46,14 @@ WORKDIR /etapa-1
 E então copiei o arquivo python para essa pasta de trabalho.
 
 ```dockerfile
-COPY carguro.py /etapa-1
+COPY carguru.py /etapa-1
 ```
 
 
 E por fim utilizei o comando CMD para rodar o script quando o container iniciar.
 
 ```dockerfile
-CMD ["python", "carguro.py"]
+CMD ["python", "carguru.py"]
 ```
 
 
@@ -59,7 +63,7 @@ CMD ["python", "carguro.py"]
 Após isso, foi necessário contruir a imagem, para isso utilizei o próprio terminal do VS Code e rodei o comando e coloquei o mesmo nome do script python.
 
 ```shell
-docker built image -t carguro-image .
+docker built -t carguru-image .
 ```
 
 
@@ -73,7 +77,7 @@ Para checar a imagem, utilizei o comando: docker imge ls e ela ja estava constan
 E então executei o comando para criar um container a partir da imagem e mantendo o mesmo nome:
 
 ```shell
-docker run --name carguro-container carguro-image
+docker run --name carguru-container carguru-image
 ```
 
 .
