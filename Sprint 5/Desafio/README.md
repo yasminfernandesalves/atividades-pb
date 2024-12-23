@@ -1,243 +1,332 @@
 # Objetivo do desafio
 
-Processar e gerar relatórios de vendas (Passo a passo):
-- criar um script que gere relatórios de vendas baseado nos dados recebidos;
-- agendar a execução para gerar-los em quatro dias no mesmo horário, e trocar os dados para gerar um relatório diferente cada dia;
-- criar um segundo script para juntar todos os relatórios em um relatório final.
-
+Praticar os conhecimentos de nuvem AWS aprendidos na sprint, manipulando arquivos diretamente no S3.
 
 
 # Etapas
 
-### **Preparação**:
-
--  Instalação da VM (Virtual Machine): tentei utilizar a virtual box pra emular o linux, porém obtive problemas por conta do meu PC, por isso utilizei o WSL (Windows Solution for Linux).
-
-- Para a realização do desafio, foi disponibilizado um arquivo chamado "dados_de_vendas.csv" com inormações de id, produto, quantidade, preço e data.
-
-- passando o arquivo csv do windows para o WSL:
-
-![Evidencia 1](../Evidencias/evi-win-wsl.png)
-
-___
 
 ## 1.  Etapa I
 
-Nessa primeira etapa se encontra o código do Script 1, onde é criado um arquivo executável chamado *processamento_de_vendas.sh*
+Procurei um arquivo CSV no portal de dados públicos no Governo Brasileiro (http://dados.gov.br), e acabei escolhendo um conjunto de dados da UFPR (Universidade Federeal do Paraná) que trás as despesas mensais por grupo de despesas, então decidi pegar a mais recente, que no caso é o de 2023.
 
-### Código do Script1: [Etapa I](etapa-1)
+- [arquivo csv original: UFPR - Despesas mensais (2023)](../Desafio/etapa-1/financeiro_despmensais_2023.csv)
 
-Logo na primeira linha do código, é definido o caminho que as pastas e arquivos devem ser criadas, para isso foi usado o comando *export* e definido a variavél PATH indicando o local desejado.
-
-```bash
-    export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" 
-```
-
-E então foi usado o cd para abrir o diretório *ecommerce*, e criado a variável data que puxa a data atual do SO no formato *yyyymmdd*
-
-```bash
-    cd /home/yaxmin/ecommerce
-
-    DATA=$(date +%Y%m%d)
-```
-
-criando o subdiretório vendas dentro de ecommerce e copiando o arquivo csv dentro dele
-
-```bash
-    mkdir -p vendas
-    cp /home/yaxmin/ecommerce/dados_de_vendas.csv /home/yaxmin/ecommerce/vendas/
-```
-
-criando o subdiretório backup dentro de vendas
-
-```bash
-
-    mkdir -p vendas/backup
-```
-
-logo após foi usado o comando mv para renomear o arquivo csv dentro do diretório vendas, e então copiando o arquivo renomeado no subdiretório backup
-
-```bash
-    mv vendas/dados_de_vendas.csv vendas/dados-${DATA}.csv`
-
-    cp vendas/dados-${DATA}.csv vendas/backup/backup-dados-${DATA}.csv
-```
-
-Para a criação do relatório já com as informações pedidas dentro dele foi utilizado colchetes "{}", e então o ">" para criar o arquivo .txt e atribuir essas informações ao documento.
-
-```bash
-    {
-        echo "Data e hora do SO: $(date +%Y/%m/%d\ %H:%M)"
-        echo "Data do primeiro registro de venda: $(tail -n +2 vendas/dados-${DATA}.csv | head -n 1 | cut -d ',' -f5)"
-        echo "Data do último registro de venda: $(tail -n +2 vendas/dados-${DATA}.csv | cut -d ',' -f5 | sort -t '/' -k3,3 -k2,2 -k1,1 | awk 'END {print}')"
-        echo "Quantidade de itens diferentes:" $(tail -n +2 vendas/dados-${DATA}.csv | cut -d ',' -f1 | sort | uniq | wc -l)
-        echo ""
-        echo "10 primeiras linhas do documento:"
-        head -n 11 vendas/dados-${DATA}.csv
-    } > vendas/backup/relatorio-${DATA}.txt
-```
-
-- detalhando o relatório:
-
-    Para conseguir a data do primeiro registro, é usado o comando **tail -n +2** para ignorar a primeira linha (cabeçalho), e o comando **head -n 1** pega a primeira linha dos registros, e por fim, **cut -d ',' -f5** extrai o quinto campo da linha, ou seja, a data.
-    ```bash
-        echo "Data do primeiro registro de venda: $(tail -n +2 vendas/dados-${DATA}.csv | head -n 1 | cut -d ',' -f5)"
-    ```
-
-    Para conseguir a última data dos registro de venda, foi usado o comando **tail -n +2** para ignorar o cabeçalho, o comando **cut -d ',' -f5** para extrair o quinto campo separado por virgulas da linha, ou seja a data, e então o comando **sort -t '/' -k3,3 -k2,2 -k1,1** que ordena as datas, e por fim, o comando **awk 'END {print}'** para imprimir a última data da lista ordenada.
-    ```bash
-        echo "Data do último registro de venda: $(tail -n +2 vendas/dados-${DATA}.csv | cut -d ',' -f5 | sort -t '/' -k3,3 -k2,2 -k1,1 | awk 'END {print}')"
-    ```
-
-    Para realizar a contagem dos itens desconsiderando duplicatas foi utilizado o comando **cut -d ',' -f2** que extrai o seundo campo dividido por virgulas de cada linha do arquivo (nome do produto), o comando **sort** organiza os produtos em ordem alfabética, o comando **uniq** remove linhas duplicadas consecutivas mantendo somente uma unidade, e por fim, o comando **wc -l** conta o número de linhas, e consequentemente a quantidade de itens únicos na lista
-    ```bash
-        echo "Quantidade de itens diferentes:" $(tail -n +2 vendas/dados-${DATA}.csv | cut -d ',' -f1 | sort | uniq | wc -l)
-     ```
-        
-    E então, foi utilizado o comando head -n 11 para conseguir mostrar o cabeçalho e as 10 primeiras linhas de registros de vendas do documento csv
-    ```bash
-        head -n 11 vendas/dados-${DATA}.csv
-    ```
-
-
-
-E por fim, compactando o arquivo dados de vendas com o nome modificado atravéz do comando *zip* e removendo arquivos desnecessários 
-
-```bash
-    zip /home/yaxmin/ecommerce/vendas/backup/backup-dados-${DATA}.zip vendas/backup/backup-dados-${DATA}.csv
-
-    rm -r vendas/backup/backup-dados-${DATA}.csv
-    rm -r vendas/dados-${DATA}.csv
-
-    #fim do script
-```
-
-[...]
-
-### Depuração
-
-Após criar o código do script realizei a depuração dele pelo próprio terminal utilizando o comando:
-```bash
-bash -x processamento_de_dados.sh
-```
-
-E depois de muitos testes e reajustes de sintaxe consegui executar-lo como esperado, obtive as pastas, arquivos solicitadas e o relatório com as informações pedidas:
-  ![Evidência](../Evidencias/evi-primeiro-relatorio.png)
-
-
-[...]
-
-### Agendamento
-
-E então programei o crontab para agendar a execução do script nos 4 dias pedidos pelo desafio. Abrindo o editor do crontab:
-```bash
-crontab -e
-```
-dentro do editor foi configurado para rodar o arquivo sh para executar durante 4 dias ás 15:27.
-
- - Como eu tive alguns problemas com o editor crontab, principalmente no momento de setar os dias da semana em que ele deveria rodar, então minha solução para isso foi deixar como a semana toda como indica a imagem abaixo:
-
- ![evi-crontab](../Evidencias/evi-crontab.png)
-
-[...]
-
-### Troca de dados e resultados
-
-Durante esses dias de execução, era necessário fazer a troca dos dados de vendas do arquivo csv manualmente, mantendo a mesma estrutura, porém com produtos, e informações diferentes.
-
-Para isso, pedi para o CHATGPT gerar três listas diferentes com a mesma estrura, e então, sempre que o ultimo relatorio executava eu mudava os dados para o dia seguinte.
-
-O Script executou quarta, quinta, sexta e sábado. Obteve os segundos documentos:
-
-| Dia | Relatórios Gerados| Arquivo compactado |
-|---|----|----|
-| 1 | [Relatório 23-10-2024](../Evidencias/relatorio-20241023.txt) | [Backup 23-10-2024](../Evidencias/backup-dados-20241023.zip) |
-| 2 | [Relatório 24-10-2024](../Evidencias/relatorio-20241024.txt) | [Backup 24-10-2024](../Evidencias/backup-dados-20241024.zip) |
-| 3 | [Relatório 25-10-2024](../Evidencias/relatorio-20241025.txt) | [Backup 25-10-2024](../Evidencias/backup-dados-20241025.zip) |
-| 4 | [Relatório 26-10-2024](../Evidencias/relatorio-20241026.txt) | [Backup 26-10-2024](../Evidencias/backup-dados-20241026.zip) |
-
-
-[...]
+As colunas do documento consistem em: Data, Grupo_Despesa, Elemento_Despesa, Natureza_Despesa, Favorecido_CNPJ,Favorecido e Valor. Para entender melhor a estrutura e o significado dos dados utilizei o documento disponibilizado: [financeiro_despmensais_dicionario.pdf](https://transparencia.ufpr.br/api/pdf/financeiro_despmensais_dicionario.pdf).
 
 ___
 
 ## 2. Etapa II
 
-Por fim, foi feito um segundo script chamado consolidador_de_processamento_de_vendas.sh para juntar os relatórios gerados em um relatório final.
+Me familiarizei com o conjunto de dados escolhido e comecei a pensar no que poderia ser analisado a pertir dele. E antes de começar a fazer propriamente a analise, realizei a limpeza e normalização desses dados, para isso, criei um arquivo notebook para facilitar a vizualização: [notebook da limpeza dos dados](../Desafio/etapa-2/limpeza-dados.ipynb)
 
-### Código do Script: [Etapa II](etapa-2)
 
-Utilizando colchetes e o comando ">" seguido do caminho desejado para a criação do arquivo e já atribuir-lo o cabeçalho com as informações do arquivo relatorio_final.txt
 
-```bash
-{
-	echo "Relatório final do processamento de vendas"
-	echo "Data:$(date +%Y/%m/%d\ %H:%M )"
-	echo ""
-} > /home/yaxmin/ecommerce/vendas/backup/relatorio_final.txt
+Utilizei a biblioteca pandas para facilitar o processo e li o arquivo usando a variável "dados" e a função "pd.read_csv" indicando a separação dos itens por ponto e vírgula, e sinalizando que o dataframe utiliza o encoding latin-1.
+Quando analisei a base de dados anteriormente, notei que varios valores da coluna "Favorecido_CNPJ" havia inconcistências no padrão de alguns cnpjs, alguns com números muito menor do que o padrão, ex: "153079" e alguns com caracteres especiais, ex: "xxxxxxxxx68". Então fiz uma função qe mantém somente os valores válidos e transforma o restante em valores: "None".
+
+```python
+import pandas as pd
+
+dados = pd.read_csv("C:/Users/yasmi/Documents/trainee-repo-template/Sprint 5/Desafio/etapa-1/financeiro_despmensais_2023.csv", sep=";", encoding="latin1")
+
+def validar_cnpj(cnpj):
+    cnpj = str(cnpj)  
+    return cnpj.isdigit() and len(cnpj) == 14  
+
+dados["Favorecido_CNPJ"] = dados["Favorecido_CNPJ"].apply(lambda x: x if validar_cnpj(x) else None)
+
 ```
 
-Utilizando o comando **for** para criar um loop que procura arquivos que seguem o padrão "relatorio-*.txt" dentro do diretório *backup*
-```bash
-for relatorio in /home/yaxmin/ecommerce/vendas/backup/relatorio-*.txt; do
-	{
-		echo $(basename "$relatorio")
-		cat $relatorio
-		echo ""
-		echo "============================================================="
-	} >> /home/yaxmin/ecommerce/vendas/backup/relatorio_final.txt
-done
+
+Anteriormente havia testado se havia alguma linha duplicada ou com valores nulos mas não possuia nenhum, então passei para a fase de normalizar os tipos de dados, como a coluna de data, preço e textos.
+
+```python
+dados['Data'] = pd.to_datetime(dados['Data'], format='%Y-%m-%d')
+dados['Valor'] = pd.to_numeric(dados['Valor'], errors='coerce')
+
+dados['Grupo_Despesa'] = dados['Grupo_Despesa'].str.strip().str.upper()
+dados['Elemento_Despesa'] = dados['Elemento_Despesa'].str.strip().str.upper()
+dados['Favorecido'] = dados['Favorecido'].str.strip().str.upper()
+
+
+dados
 ```
-- detalhando o loop
 
-    Loop que procura, dentro do diretório backup, arquivos que começam com relatorio- e terminam com .txt, e todos os arquivos que ele achar nesses critérios será atribuido a variável relatorio
-    ```bash
-    for relatorio in /home/yaxmin/ecommerce/vendas/backup/relatorio-*.txt; do
-    ```
 
-    Para identificar os relatórios antes de imprimi-los é usado o comando basename para obter apenas o nome do arquivo, sem o caminho, e imprime esse nome no documento
-    ```bash
-    echo $(basename "$relatorio")
-    ```
 
-    Comando que lê e mostra o conteúdo dos relatórios dentro do arquivo
-    ```bash
-    cat $relatorio
-    ```
-
-    Fecha o bloco de comandos, e atribui o seu resultado no relatório final, sendo o comando ">>" usado para adicionar ao final do arquivo
-    ```bash
-    } >> /home/yaxmin/ecommerce/vendas/backup/relatorio_final.txt
-    ```
-
-    Finalizando o loop e o Script
-    ```bash
-    done
-
-    # fim do script
-    ```
-
+Após isso, exportei o resultado para um arquivo .csv sem o índice que ele adiciona automaticamente, resultando no [dados-tratados.csv](../Desafio/etapa-2/dados-tratados.csv)
+```python
+dados.to_csv('dados-tratados.csv', index=False)
+```
 
 [...]
 
-### Depuração
+___
 
-Assim como na primeira etapa, a depuração e teste do código foi feito pelo terminal do próprio Linux.
+## 3. Etapa III
 
-![script2-depuração](../Evidencias/depuracao-script2.png)
+Então foi pedido para criar um script python que carregue o arquivo para um bucket novo para executar o desafio. Conversando com o monitor nas reuniões técnicas, foi informado que seria necessário enviar o arquivo original e o tratado para o bucket, então criei dois scripts para enviá-los.
 
-
-[...]
-
-### Resultados
-
-- [Relatório final](../Evidencias/relatorio_final.txt)
+código: [Script 1 - criando um bucket na AWS e carregando o arquivo original](../Desafio/etapa-3/script1.py)
 
 
+Como indicado nas instruções, importei o Boto3 para os fazer os scripts. Então configurei as credenciais da conta AWS que são usadas para autenticar e autorizar a interação com a AWS, indicando a chave de acesso, a chave secreta associada a chave de acesso e o token da seção, que é temporaria e expira em algumas horas. O indicado seria não colocar as credenciais diretamente no script, mas sim criar variáveis de ambiente, porém obtive alguns problemas com isso e decidi seguir com esse plano B.
+
+```python
+import boto3
+
+# credenciais
+aws_access_key_id=''
+aws_secret_access_key=''
+aws_session_token=''
+
+```
 
 
+Utilizei o comando "boto.resource("s3")" que permite manipular recursos da AWS, como bucketse objetos, e o parâmetro sendo as credenciais da conta informada anteriormente. Logo após, criando o "bucket sprint5-desafio" para armazenar os arquivos do desafio.
 
+```python
+# iniciando o recurso S3
+s3 = boto3.resource(
+    's3',
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    aws_session_token=aws_session_token
+)
+
+# criando o bucket
+bucket_name = 'sprint5-desafio'
+bucket = s3.create_bucket(Bucket=bucket_name)
+print(f"Bucket {bucket_name} criado com sucesso")
+```
+
+
+Depois da criação do bucket já era possível realizar o upload do arquivo, para isso, informei o caminho do arquivo e o nome que gostaria de aplicar ao arquivo. Criei um bloco com o comando "bucket.upload_file(arquivo_path, arquivo_key)" que realiza o upload do arquivo e informa se ele foi feito com sucesso ou se houve algum erro.
+```python
+# upload do arquivo
+arquivo_path = 'Sprint 5/Desafio/etapa-1/financeiro_despmensais_2023.csv'
+arquivo_key = 'dados-original.csv'
+
+try:
+    bucket.upload_file(arquivo_path, arquivo_key)
+    print("Arquivo enviado com sucesso para o bucket!")
+except Exception as e:
+    print("Erro ao fazer upload do arquivo.")
+```
+
+
+- execução do script: 
+
+    ![evi](../Evidencias/exec-script1.png)
+
+- bucket e arquivo já constam na AWS:
     
+    ![evi](../Evidencias/resultado-script1.png)
+
+
+[...]
+
+
+código: [Script 2 - realizando o upload dos dados trtados para o bucket já criado](../Desafio/etapa-3/script1.py)
+
+
+Seguindo o mesmo padrão do primeiro script, apresentando as credencias e o recurso que será utilizado.
+```python
+import boto3
+
+# credenciais
+aws_access_key_id=''
+aws_secret_access_key=''
+aws_session_token=''
+
+# iniciando o recurso S3
+s3 = boto3.resource(
+    's3',
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    aws_session_token=aws_session_token
+)
+
+```
+
+
+Como o bucket já foi criado, só é preciso referenciá-lo e informar o caminho do arquivo e o nome que gostaria de nomear o arquivo no bucket. Então reutilizando o mesmo bloco de upload de arquivo do script anterior.
+```python
+# referenciando o bucket
+bucket_nome = 'sprint5-desafio'
+bucket = s3.Bucket(bucket_nome)
+
+# upload do arquivo
+arquivo_path = 'C:/Users/yasmi/Documents/trainee-repo-template/Sprint 5/Desafio/etapa-2/dados-tratados.csv'
+arquivo_key = 'dados-tratados.csv'
+
+try:
+    bucket.upload_file(arquivo_path, arquivo_key)
+    print("Arquivo enviado com sucesso para o bucket!")
+except Exception as e:
+    print("Erro ao fazer upload do arquivo.")
+```
+
+
+- execução do script:
+    ![evi](../Evidencias/exec-script2.png)
+
+
+- o arquivo já consta no bucket:
+    ![evi](../Evidencias/resultado-sscript2.png)
+
+
+[...]
+
+
+___
+
+## 4. Etapa IV
+
+Foi pedido para criar outro script a partir do arquivo que está dentro do S3, criar um dataframe e executar as seguintes manipulações: 
+    
+**1.** uma clausula que filtra dados usando ao menos dois operadores lógicos;
+
+**2.** duas funções de agregação; 
+
+**3.** uma função condicional; 
+
+**4.** uma função de conversão; 
+
+**5.** uma função de data; 
+
+**6.** uma função de string.
+
+[...]
+
+A partir dos requisitos pedidos e da base de dados que escolhi, decidi criar uma pergunta especifica para responde-la na análise: 
+
+ **"Qual foi o maior grupo de despesa no mês de agosto, considerando apenas despesas acima de R$2000 e cujo favorecido seja "UNIVERSIDADE FEDERAL DO PARANA", constando suas subcategorias, seus gastos totais e a média geral desses gastos?"**
+
+código: [Script - Análise dos dados](../Desafio/etapa-4/dados-analise.py)
+
+
+Seguindo o mesmo padrão dos outros scripts, adicionei as credenciais de acesso e iniciei o cliente s3.
+
+```python
+import boto3
+import pandas as pd
+
+aws_access_key_id=''
+aws_secret_access_key=''
+aws_session_token=''
+
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key,
+    aws_session_token=aws_session_token
+)
+```
+
+
+Referenciei o bucket, nome do arquivo e utilizei o comando ".get_object" para fazer o download do arquivo armazenado no bucket, e depois "pd.read_csv(response['Body'])" que contém o conteudo do arquivo, para ler ele.
+
+```python
+bucket_name = 'sprint5-desafio'
+arquivo_key = 'dados-tratados.csv' 
+
+# Carregando o arquivo do S3
+response = s3_client.get_object(Bucket=bucket_name, Key=arquivo_key)
+dados = pd.read_csv(response['Body'])  
+```
+
+
+### Analise dos dados usando pandas
+
+
+Convertendo a coluna "Data" para datetime e criei uma coluna separada para os meses de cada registro que será utilizada na análise final. Criei um filtro para os registros do mês de agosto (8), registros com valores acima de dois mil reais e por fim retornar somente os registros que a coluna "Favorecido" consta como "UNIVERSIDADE FERDERAL DO PARANA"(e removendo espaços extras com ".str.strip()").
+
+```python
+dados['Data'] = pd.to_datetime(dados['Data'], format='%Y-%m-%d')
+dados['Mes'] = dados['Data'].dt.month
+
+filtro = (
+    (dados['Mes'] == 8) & 
+    (dados['Valor'] > 2000) & 
+    (dados['Favorecido'].str.strip() == "UNIVERSIDADE FEDERAL DO PARANA")
+)
+dados_filtrados = dados[filtro].copy()
+```
+
+
+Adicionando uma coluna condicional chamada Valor_Alta, onde valores acima de R$5000 é considerado alto e abaixo desse valor considerado como baixo. E então agrupando os dados pelo "Grupo_Despesa" e "Elemento_Despesa" e calcula a soma e a média desses valores.
+
+```python
+dados_filtrados.loc[:, 'Valor_Alta'] = dados_filtrados['Valor'].apply(lambda x: 'Alta' if x > 5000 else 'Baixa')
+
+# agrupamento e agregação
+resultado = (dados_filtrados).groupby(['Grupo_Despesa', 'Elemento_Despesa'], as_index=False).agg(Total_Gasto=('Valor', 'sum'), Media_Gasto=('Valor', 'mean'))
+```
+
+
+Extraindo informações do grupo com maior gasto tota, concatenando as subcategorias "Elemento_desapesa", utilizando a função ".join", e seus gastos no mesmo campo. E por fim, criando um dataframe juntando esses dados que já foram filtrados para retornar na resposta da pergunta.
+
+```python
+# resultado consolidado em um dataframe
+grupo_nome = grupo_maior_gasto['Grupo_Despesa']
+gasto_total = grupo_maior_gasto['Gasto_Total']
+media_geral = grupo_maior_gasto['Media_Final']
+subcategorias = ", ".join(
+    f"{row['Elemento_Despesa']} (R${row['Total_Gasto']:.2f})"
+    for _, row in resultado[resultado['Grupo_Despesa'] == grupo_nome].iterrows()
+)
+
+resultado_df = pd.DataFrame({
+    'Maior Grupo de Despesa': [grupo_nome],
+    'Gasto Total': [gasto_total],
+    'Média Geral': [media_geral],
+    'Subcategorias': [subcategorias]
+})
+```
+
+
+Já adiantando a etapa 5, converti o dataframe em csv e fiz o upload do arquivo para o s3 com o nome "dados-analise.csv"
+
+```python
+
+csv_output = resultado_df.to_csv(index=False)
+
+output_key = 'dados-analise.csv'
+
+# enviando o arquivo modificado de volta para o S3
+s3_client.put_object(Bucket=bucket_name, Key=output_key, Body=csv_output)
+
+print(f"Arquivo modificado enviado para o S3 com o nome: {output_key}")
+```
+
+
+- execução do script:
+    ![evi](../Evidencias/exec-analise.png)
+
+- o arquivo constando no bucket:
+    ![evi](../Evidencias/resultado-analise.png)
+
+
+[...]
+
+___
+
+## 5. Etapa V
+
+Pedia para salvar o arquivo no formato CSV e enviar-lo para o mesmo bucket criado para esse desafio, porém como dito anteriormente, adicionei essa parte no próprio script. Então fui até o bucket e baixei o arquivo dos dados da análise que já constava lá após a execução do script anterior.
+
+- [dados-analise.csv](../Desafio/etapa-5/dados-analise.csv)
+
+
+[...]
+
+
+Pergunta: *"Qual foi o maior grupo de despesa no mês de agosto, considerando apenas despesas acima de R$2000 e cujo favorecido seja "UNIVERSIDADE FEDERAL DO PARANA", constando suas subcategorias, seus gastos totais e a média geral desses gastos?"*
+
+Resposta: 
+![evi](../Evidencias/resposta%20analise.png)
 
 
 

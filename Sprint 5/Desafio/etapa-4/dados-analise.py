@@ -14,7 +14,6 @@ s3_client = boto3.client(
     aws_session_token=aws_session_token
 )
 
-# Configuração do S3
 bucket_name = 'sprint5-desafio'
 arquivo_key = 'dados-tratados.csv' 
 
@@ -23,9 +22,8 @@ response = s3_client.get_object(Bucket=bucket_name, Key=arquivo_key)
 dados = pd.read_csv(response['Body'])  
 
 # análise dos dados: 
-# pergunta -> "Qual foi o maior grupo de despesa no mês de agosto, considerando apenas despesas acima de R$2000 e cujo favorecido seja "UNIVERSIDADE FEDERAL DO PARANA"?"
 
-# Filtragem de agosto, despesas acima de 2000 e favorecido "UNIVERSIDADE FEDERAL DO PARANA"
+# filtragem de agosto, despesas acima de 2000 e favorecido "UNIVERSIDADE FEDERAL DO PARANA"
 dados['Data'] = pd.to_datetime(dados['Data'], format='%Y-%m-%d')
 dados['Mes'] = dados['Data'].dt.month
 filtro = (
@@ -35,12 +33,12 @@ filtro = (
 )
 dados_filtrados = dados[filtro].copy()
 
-# Adicionando uma coluna condicional
+# adicionando uma coluna condicional
 dados_filtrados.loc[:, 'Valor_Alta'] = dados_filtrados['Valor'].apply(
     lambda x: 'Alta' if x > 5000 else 'Baixa'
 )
 
-# Agrupamento e agregação
+# agrupamento e agregação
 resultado = (
     dados_filtrados
     .groupby(['Grupo_Despesa', 'Elemento_Despesa'], as_index=False)
@@ -50,7 +48,7 @@ resultado = (
     )
 )
 
-# Identificando o grupo com maior gasto total
+# grupo com maior gasto total
 grupo_maior_gasto = (
     resultado
     .groupby('Grupo_Despesa', as_index=False)
@@ -62,7 +60,7 @@ grupo_maior_gasto = (
     .iloc[0]
 )
 
-# Resultado consolidado em um DataFrame
+# consolidando o resultado em um dataframe
 grupo_nome = grupo_maior_gasto['Grupo_Despesa']
 gasto_total = grupo_maior_gasto['Gasto_Total']
 media_geral = grupo_maior_gasto['Media_Final']
@@ -78,13 +76,11 @@ resultado_df = pd.DataFrame({
     'Subcategorias': [subcategorias]
 })
 
-# Salvar o DataFrame em formato CSV
+# salvando o dataframe no formato CSV
 csv_output = resultado_df.to_csv(index=False)
 
-# Nome do arquivo modificado
-output_key = 'dados-analise.csv'
 
-# Enviar o arquivo modificado de volta para o S3
+output_key = 'dados-analise.csv'
 s3_client.put_object(Bucket=bucket_name, Key=output_key, Body=csv_output)
 
 print(f"Arquivo modificado enviado para o S3 com o nome: {output_key}")
