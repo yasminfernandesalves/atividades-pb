@@ -2,9 +2,9 @@ import boto3
 import pandas as pd
 
 # Credenciais
-aws_access_key_id='ASIA5MSUB57RZ4AR6YL3'
-aws_secret_access_key='o2Lw3zqTL7HaFx8f4ID0TDKC7PD6JsoYrOSEEE4Y'
-aws_session_token='IQoJb3JpZ2luX2VjEPr//////////wEaCXVzLWVhc3QtMSJIMEYCIQC0IJDrIcsLdV1IV8EZ6TNinfEI3j6I9LSvZE9AouIrGAIhAOqUsy0BT4kyBrPR1SNSJ8CGGzg0nveH2MlYzpGAdIYkKqYDCMP//////////wEQABoMOTIwMzczMDMwODgzIgxy2a0DAPtZny/bUCcq+gKiUfCKC8SwnpMMJ8bTtMcnpt6Be6RavBxbXH06+pp0tUo/2ZIrNAT39Ez7aQnqJvH5tI0TCuJKTvzbpLNyVKCAUO6tmebJpYK2zCXcb6Qh0np98RTWpVHO7kClp1+NePmWY2fOLMn1tSrt4BbMS9+xltmCfy9v/pWEBcGmrqIcMTNttVHp/Gbm4Xe9FYAEXQbLpl+H2QQiYiM5V4I+Uo86b8UIFwv5ho8Xn1sG1GuXfbqRKH8shyy/piZveonCsHGWNuWQJn4m9H953v0fognb0/yvoU4yAqk6P9ndcxL9vCtTzlQDnLcmt0/+redsPrTUZzN69BWoZcvd/bzlkElHbrxm3tc0CR2NwiwWfdGI2noeRG4SrTKnCL7yhvLN1Y5TUEURl6ykJyZU4DFyTURXV0FqkM7kQoypnALMvum/+bpHxyXICpk5TwFSRpNwkWKrjK9A7yc6cEoTJ52C+d9YofSD5zv2YjdMq+RqecKN4G3lraeTdaA5MMkw3JihuwY6pQEzHWipzuEfk+YOwVVw+dD56+qUaXRfYpjexaK3wB4j1Knhr1SLRK7XFDqjhvG7+rZwABiG3eN3LFanWMSGmK+4qYrlrvRwlaNFreiUzabjP73YwHsV/mHQMOfLJj28ihtaVL4C69iMLtUNADxQ0hJa38Xa8sLy2z4ZvQkjsSDDYXnP1WjoJw1vUMhgnI636ro+Az82I9xKN0FzXzhg8yOoWWMCrRs='
+aws_access_key_id='ASIA5MSUB57R4SY6SC2G'
+aws_secret_access_key='Pymxb6+gNV4er4nLVqyDaV10RA5QGQPOBPm3FoId'
+aws_session_token='IQoJb3JpZ2luX2VjEBAaCXVzLWVhc3QtMSJIMEYCIQDrWTJdL03//6oLiTbsXxV8fmNdI5p2gj4jDuzPLrwz/AIhAMA40LFtj5hLzW8TviFfnDvOhIEkv92CeiwYbjjhbKHuKqYDCNn//////////wEQABoMOTIwMzczMDMwODgzIgwFfna8lUuAT1XV2Rgq+gIGoB1y7panzyO40qgHyOzLLu0sLp6sfdc6EWapOOL2Z4MNCx/vd3xkmbpg8IKIjeuPapbx8q7tFfekIBnz4zqRyJuYY/oVfiVWQJ9DB8SLZ8BJU6wrF9fzJ+mawl0tCC+bAziztQ7yqil1wJAKuiUgqAO7USWEVDOWXvT6fOeIGCIzlxtGmsB1lXLz1TlSi5TNKdxe74WwnfmVXelNeKCN+PRjSINCdYgVhoSkNg/tuIli1UNHRxGzVulKLCwZL9blax3W5sbFodtWJTA8b1TEtwqb5ylDZEmDTCR/Jz1gSady/EHBB5p9G3sXwv8bs0XAYSPsPc8xM8SxS6FIReQ8o0dFCz2ze1uGZzodPSMFLZWX8x1MwVd38YiNsCktcbJ2QLgp6UvqBIAaFNRK+V+D/FxexMhueQrkRuOwc45pyWi35VxmKMgP8/PymhNHp3qhldnfdFHB5oR9ZfFJ6fNojx7M+mQy3wZM5pufd4VqE/DJzXpO5ahcp1kw7Y2muwY6pQHfGoU9ZK62dcGH0gbD7MnrZj/2lgKL0xzDKioCJPsOM/xOXo5xyyNwU77IlgiulsFjFm36Jr176JM9tq7M7lLR8EQC/Nf8EtWS9Li9FzW3azWKuqXGurS7d1Xhb6iDBPbfQuR0+TP/1gWaFpqH9TPUNomuPyTCXcrColxxI/b05Btau+iYwOlXNP8GsuipjYnMfza1/Uqm5rknP/v8S9Ve9PsoZyo='
 
 # Iniciando o cliente S3
 s3_client = boto3.client(
@@ -22,6 +22,9 @@ response = s3_client.get_object(Bucket=bucket_name, Key=arquivo_key)
 dados = pd.read_csv(response['Body'])  
 
 # análise dos dados: 
+
+# Pergunta: "Qual foi o maior grupo de despesa no mês de agosto, considerando apenas despesas acima de R$2000 e cujo favorecido seja "UNIVERSIDADE FEDERAL DO PARANA", 
+# constando suas subcategorias, seus gastos totais e a média geral desses gastos?"
 
 # filtragem de agosto, despesas acima de 2000 e favorecido "UNIVERSIDADE FEDERAL DO PARANA"
 dados['Data'] = pd.to_datetime(dados['Data'], format='%Y-%m-%d')

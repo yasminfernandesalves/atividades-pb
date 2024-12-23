@@ -3,7 +3,22 @@
 Praticar os conhecimentos de nuvem AWS aprendidos na sprint, manipulando arquivos diretamente no S3.
 
 
+**Entregaveis**: 
+
+- arquivo markdown com evidências imagens/prints de execução, documentação de explicação de cada parte executada.
+- arquivo PY contendo os códigos
+- arquivo CSV baixado e resultante
+
+
 # Etapas
+
+
+- [Etapa 1 - Escolha do conjunto de dados](#1--etapa-i)
+- [Etapa 2 - Limpeza dos dados](#2-etapa-ii)
+- [Etapa 3 - Criando bucket e carregando o arquivo](#3-etapa-iii)
+- [Etapa 3 - Analisando os dados](#4-etapa-iv)
+- [Etapa 5 - Arquivo csv da analise](#5-etapa-v)
+
 
 
 ## 1.  Etapa I
@@ -170,10 +185,12 @@ except Exception as e:
 
 
 - execução do script:
+
     ![evi](../Evidencias/exec-script2.png)
 
 
 - o arquivo já consta no bucket:
+
     ![evi](../Evidencias/resultado-sscript2.png)
 
 
@@ -303,9 +320,12 @@ print(f"Arquivo modificado enviado para o S3 com o nome: {output_key}")
 
 
 - execução do script:
+
     ![evi](../Evidencias/exec-analise.png)
 
+
 - o arquivo constando no bucket:
+
     ![evi](../Evidencias/resultado-analise.png)
 
 
