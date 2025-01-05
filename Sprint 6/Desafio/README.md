@@ -202,4 +202,4 @@ Para executar o container, criei um arquivo .env com as minhas credenciais da AW
 
 Resultado no console da AWS:
 
-![evi](../Evidencias/resul-console-aws.png)
+![evi](../Evidencias/result-movies-console-aws.png)
