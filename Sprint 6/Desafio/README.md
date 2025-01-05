@@ -196,7 +196,7 @@ ___
 
 executar localmente o container docker para realizar a carga dos dados ao S3.
 
-Para executar o container, criei um arquivo .env com as minhas credenciais da AWS assim
+Para executar o container, criei um arquivo .env com as minhas credenciais da AWS assim evitando adicioná-las diretamente no terminal.
 
 ![evi](../Evidencias/exec-container.png)
 

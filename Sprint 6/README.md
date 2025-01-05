@@ -7,8 +7,15 @@
 
 # Exercícios
 
+Lab S3 - 
+    [arquivos gerados](../Sprint%206/Exercicios/lab-s3/)
 
 
+Lab Athena - 
+    [arquivos gerados](../Sprint%206/Exercicios/lab-athena/)
+
+Lab Lambda - 
+    [arquivos gerados](../Sprint%206/Exercicios/lab-lambda/)
 
 
 # Evidências
