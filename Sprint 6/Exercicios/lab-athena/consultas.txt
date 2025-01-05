@@ -1,0 +1,52 @@
+-> criando banco de dados
+
+CREATE DATABASE meubanco
+
+-----------------------------------------------------------
+
+-> criando tabela
+
+CREATE EXTERNAL TABLE IF NOT EXISTS meubanco.nomes (
+  nome STRING,
+  sexo STRING,
+  total INT,
+  ano INT
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+  'serialization.format' = ',',
+  'field.delim' = ','
+)
+LOCATION 's3://exercicio.com/dados/';
+
+-------------------------------------------------------------
+
+-> testando os dados
+
+SELECT nome 
+FROM meubanco.nomes
+WHERE ano = 1999 
+ORDER BY total 
+LIMIT 15;
+
+---------------------------------------------------------------
+
+-> consulta que lista os 3 nomes mais usados em cada década desde o 1950 até hoje
+
+SELECT 
+  decada,
+  nome,
+  total_decada
+FROM (
+  SELECT 
+    FLOOR(ano / 10) * 10 AS decada,
+    nome,
+    SUM(total) AS total_decada,
+    ROW_NUMBER() OVER (PARTITION BY FLOOR(ano / 10) * 10 ORDER BY SUM(total) DESC) AS posicao
+  FROM meubanco.nomes
+  WHERE ano >= 1950
+  GROUP BY 
+    FLOOR(ano / 10) * 10, nome
+) AS NomesPorDecada
+WHERE posicao <= 3
+ORDER BY decada, posicao;
