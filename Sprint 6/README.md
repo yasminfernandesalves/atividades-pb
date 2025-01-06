@@ -63,13 +63,13 @@ O conteúdo para essa sprint foi bem extenso e informativo, com um total de 9 cu
  
 - criando o bucket:
 
-    ![evi](../Sprint%205/Exercicios/Evidencias/bucket-criado.png)
+![evi](../Sprint%205/Exercicios/Evidencias/bucket-criado.png)
 
 
 
 - site funcionando:
 
-    ![evi](../Sprint%205/Exercicios/Evidencias/site-funcionando.png)
+![evi](../Sprint%205/Exercicios/Evidencias/site-funcionando.png)
 
 
 [...]
@@ -78,25 +78,32 @@ O conteúdo para essa sprint foi bem extenso e informativo, com um total de 9 cu
 **Lab AWS Athena:** 
 
 -   etapa 1 - criando a pasta queries e configurando ela:
-    ![evi](../Sprint%206/Exercicios/evidencias/athena1.1-pasta-queries.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/athena1.1-pasta-queries.png)
 
 
 -   etapa 2 - criando banco de dados:
-    ![evi](../Sprint%206/Exercicios/evidencias/athena2.1-bancoDados-criando.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/athena2.1-bancoDados-criando.png)
 
 
 -   etapa 3.1 - criando tabela a partir do arquivo "nome.csv":
-    ![evi](../Sprint%206/Exercicios/evidencias/athena3.1-tabela-criando.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/athena3.1-tabela-criando.png)
 
 
 -   etapa 3.2 - tabela criada:
-    ![evi](../Sprint%206/Exercicios/evidencias/athena3.2-tabela-resultado.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/athena3.2-tabela-resultado.png)
 
 -   etapa 3.4 - testando os dados com a consulta que traz os 15 nomes em que o ano seja 1999:
-    ![evi](../Sprint%206/Exercicios/evidencias/athena3.4-teste-dados.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/athena3.4-teste-dados.png)
+
 
 -   etapa 3.5 - criando uma consulta que lista os 3 nomes mais usados em cada década desde o 1950 até hoje:
-    ![evi](../Sprint%206/Exercicios/evidencias/athtena3.5-consulta-nomes.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/athtena3.5-consulta-nomes.png)
 
 
 [...]
@@ -104,39 +111,48 @@ O conteúdo para essa sprint foi bem extenso e informativo, com um total de 9 cu
 **Lab AWS Lambda**:
 
 -   etapa 1 - criando uma função:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda1-criando-funcao.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda1-criando-funcao.png)
 
 
 -   etapa 2 - construindo e testando o código: 
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda2-criando-testando-cod.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/lambda2-criando-testando-cod.png)
 
 
 -   etapa 3.1 - após criar o dockerfile, construi a imagem amazonlinuxpython39:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.1-criando-imagem.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.1-criando-imagem.png)
 
 
 -   etapa 3.2 - executando e acessando o shell do container: 
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.2-executando-container.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.2-executando-container.png)
 
 
 -   etapa 3.3 - instalando o pandas:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.3-install-pandas.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.3-install-pandas.png)
 
 
 -   etapa 3.4 - campactando os arquivos em um arquivo zip:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.4-compactando-arq.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.4-compactando-arq.png)
 
 
 -   etapa 3.5 - copiando o arquivo do container na máquina local:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.5-copiando-arq.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.5-copiando-arq.png)
 
 
 -   etapa 3.6 - criando camada para armazenar o arquivo zip:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda3.6-criando-camada.png)
+
+![evi](../Sprint%206/Exercicios/evidencias/lambda3.6-criando-camada.png)
 
 
 -   etapa 4 - utilizando a camada:
-    ![evi](../Sprint%206/Exercicios/evidencias/lambda4-utilizando-camada.png)
+    
+![evi](../Sprint%206/Exercicios/evidencias/lambda4-utilizando-camada.png)
 
 
 [...]
@@ -144,9 +160,13 @@ O conteúdo para essa sprint foi bem extenso e informativo, com um total de 9 cu
 
 **Lab AWS - Limpeza de recursos:**
 
--
-    ![]()
+- antes da limpeza:
 
+![evi](../Sprint%206/Exercicios/evidencias/antes-limpeza.png)
+
+- depois da limpeza:
+
+![evi](../Sprint%206/Exercicios/evidencias/depois-limpeza.png)
 
 
 [...]
