@@ -1,0 +1,1532 @@
+[
+    {
+        "imdb_id": "tt29623480",
+        "title": "The Wild Robot",
+        "revenue": 324352935,
+        "budget": 78000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Wild Robot Collection"
+    },
+    {
+        "imdb_id": "tt21692408",
+        "title": "Kung Fu Panda 4",
+        "revenue": 548040835,
+        "budget": 80000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Kung Fu Panda Collection"
+    },
+    {
+        "imdb_id": "tt0126029",
+        "title": "Shrek",
+        "revenue": 488628188,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Shrek Collection"
+    },
+    {
+        "imdb_id": "tt3915174",
+        "title": "Puss in Boots: The Last Wish",
+        "revenue": 484700000,
+        "budget": 90000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Español"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Puss in Boots Collection"
+    },
+    {
+        "imdb_id": "tt0298148",
+        "title": "Shrek 2",
+        "revenue": 935454538,
+        "budget": 150000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Shrek Collection"
+    },
+    {
+        "imdb_id": "tt0892769",
+        "title": "How to Train Your Dragon",
+        "revenue": 494879471,
+        "budget": 165000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "How to Train Your Dragon Collection"
+    },
+    {
+        "imdb_id": "tt1679335",
+        "title": "Trolls",
+        "revenue": 347337803,
+        "budget": 125000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Trolls Collection"
+    },
+    {
+        "imdb_id": "tt1646971",
+        "title": "How to Train Your Dragon 2",
+        "revenue": 621537519,
+        "budget": 145000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "How to Train Your Dragon Collection"
+    },
+    {
+        "imdb_id": "tt0441773",
+        "title": "Kung Fu Panda",
+        "revenue": 632091832,
+        "budget": 130000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Kung Fu Panda Collection"
+    },
+    {
+        "imdb_id": "tt2386490",
+        "title": "How to Train Your Dragon: The Hidden World",
+        "revenue": 524580592,
+        "budget": 129000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "How to Train Your Dragon Collection"
+    },
+    {
+        "imdb_id": "tt14362112",
+        "title": "Trolls Band Together",
+        "revenue": 207318137,
+        "budget": 95000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Trolls Collection"
+    },
+    {
+        "imdb_id": "tt0892791",
+        "title": "Shrek Forever After",
+        "revenue": 752600867,
+        "budget": 165000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Shrek Collection"
+    },
+    {
+        "imdb_id": "tt1911658",
+        "title": "Penguins of Madagascar",
+        "revenue": 373515621,
+        "budget": 132000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0351283",
+        "title": "Madagascar",
+        "revenue": 542064525,
+        "budget": 75000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Français",
+            "Deutsch",
+            "Português",
+            "Español"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Madagascar Collection"
+    },
+    {
+        "imdb_id": "tt0166813",
+        "title": "Spirit: Stallion of the Cimarron",
+        "revenue": 122563539,
+        "budget": 80000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "Español",
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Spirit Collection"
+    },
+    {
+        "imdb_id": "tt1302011",
+        "title": "Kung Fu Panda 2",
+        "revenue": 665692281,
+        "budget": 150000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Kung Fu Panda Collection"
+    },
+    {
+        "imdb_id": "tt0413267",
+        "title": "Shrek the Third",
+        "revenue": 813367380,
+        "budget": 160000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Shrek Collection"
+    },
+    {
+        "imdb_id": "tt2051999",
+        "title": "Thriller Night",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2267968",
+        "title": "Kung Fu Panda 3",
+        "revenue": 521170825,
+        "budget": 145000000,
+        "production_countries": [
+            "China",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Kung Fu Panda Collection"
+    },
+    {
+        "imdb_id": "tt0481499",
+        "title": "The Croods",
+        "revenue": 587204668,
+        "budget": 135000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Croods Collection"
+    },
+    {
+        "imdb_id": "tt0481499",
+        "title": "The Croods",
+        "revenue": 587204668,
+        "budget": 135000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Croods Collection"
+    },
+    {
+        "imdb_id": "tt0120587",
+        "title": "Antz",
+        "revenue": 171757863,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Español"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1001526",
+        "title": "Megamind",
+        "revenue": 321885765,
+        "budget": 130000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Megamind Collection"
+    },
+    {
+        "imdb_id": "tt2051999",
+        "title": "Thriller Night",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2267968",
+        "title": "Kung Fu Panda 3",
+        "revenue": 521170825,
+        "budget": 145000000,
+        "production_countries": [
+            "China",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Kung Fu Panda Collection"
+    },
+    {
+        "imdb_id": "tt8115900",
+        "title": "The Bad Guys",
+        "revenue": 250162278,
+        "budget": 80000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Bad Guys Collection"
+    },
+    {
+        "imdb_id": "tt2850386",
+        "title": "The Croods: A New Age",
+        "revenue": 215905815,
+        "budget": 65000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Croods Collection"
+    },
+    {
+        "imdb_id": "tt1277953",
+        "title": "Madagascar 3: Europe's Most Wanted",
+        "revenue": 746921274,
+        "budget": 145000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Madagascar Collection"
+    },
+    {
+        "imdb_id": "tt0166813",
+        "title": "Spirit: Stallion of the Cimarron",
+        "revenue": 122563539,
+        "budget": 80000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "Español",
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Spirit Collection"
+    },
+    {
+        "imdb_id": "tt0120630",
+        "title": "Chicken Run",
+        "revenue": 224834564,
+        "budget": 45000000,
+        "production_countries": [
+            "France",
+            "United Kingdom",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Chicken Run Collection"
+    },
+    {
+        "imdb_id": "tt0424095",
+        "title": "Flushed Away",
+        "revenue": 178120010,
+        "budget": 149000000,
+        "production_countries": [
+            "United Kingdom",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt6932874",
+        "title": "The Boss Baby: Family Business",
+        "revenue": 146745280,
+        "budget": 82000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Boss Baby Collection"
+    },
+    {
+        "imdb_id": "tt0864835",
+        "title": "Mr. Peabody & Sherman",
+        "revenue": 272912430,
+        "budget": 145000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0892782",
+        "title": "Monsters vs Aliens",
+        "revenue": 381509870,
+        "budget": 175000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt27155038",
+        "title": "Ruby Gillman, Teenage Kraken",
+        "revenue": 46247409,
+        "budget": 70000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0120794",
+        "title": "The Prince of Egypt",
+        "revenue": 218613188,
+        "budget": 70000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "עִבְרִית",
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "DreamWorks Bible Stories Collection"
+    },
+    {
+        "imdb_id": "tt0165982",
+        "title": "Sinbad: Legend of the Seven Seas",
+        "revenue": 80767884,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt28066777",
+        "title": "Orion and the Dark",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "France",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1446192",
+        "title": "Rise of the Guardians",
+        "revenue": 306941670,
+        "budget": 145000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "Français",
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt6587640",
+        "title": "Trolls World Tour",
+        "revenue": 49276818,
+        "budget": 90000000,
+        "production_countries": [
+            "Japan",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Trolls Collection"
+    },
+    {
+        "imdb_id": "tt0120587",
+        "title": "Antz",
+        "revenue": 171757863,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Español"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0327084",
+        "title": "Over the Hedge",
+        "revenue": 343397247,
+        "budget": 80000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0138749",
+        "title": "The Road to El Dorado",
+        "revenue": 76400000,
+        "budget": 95000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt10954718",
+        "title": "Dog Man",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Post Production",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2224026",
+        "title": "Home",
+        "revenue": 368871007,
+        "budget": 135000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0165982",
+        "title": "Sinbad: Legend of the Seven Seas",
+        "revenue": 80767884,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0264734",
+        "title": "Joseph: King of Dreams",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "DreamWorks Bible Stories Collection"
+    },
+    {
+        "imdb_id": "tt11112140",
+        "title": "How to Train Your Dragon: Homecoming",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0864835",
+        "title": "Mr. Peabody & Sherman",
+        "revenue": 272912430,
+        "budget": 145000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt6587640",
+        "title": "Trolls World Tour",
+        "revenue": 49276818,
+        "budget": 90000000,
+        "production_countries": [
+            "Japan",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Trolls Collection"
+    },
+    {
+        "imdb_id": "tt6324278",
+        "title": "Abominable",
+        "revenue": 190304772,
+        "budget": 75000000,
+        "production_countries": [
+            "China",
+            "Japan",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt6113186",
+        "title": "Shrek 5",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "In Production",
+        "is_sequel": true,
+        "collection_name": "Shrek Collection"
+    },
+    {
+        "imdb_id": "tt2268617",
+        "title": "Puss in Boots: The Three Diablos",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt30017619",
+        "title": "The Bad Guys 2",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "Japan",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Post Production",
+        "is_sequel": true,
+        "collection_name": "The Bad Guys Collection"
+    },
+    {
+        "imdb_id": "tt0897387",
+        "title": "Shrek the Halls",
+        "revenue": 0,
+        "budget": 60000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt11084896",
+        "title": "Spirit Untamed",
+        "revenue": 17635215,
+        "budget": 30000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Spirit Collection"
+    },
+    {
+        "imdb_id": "tt3874544",
+        "title": "The Boss Baby",
+        "revenue": 527965936,
+        "budget": 125000000,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "The Boss Baby Collection"
+    },
+    {
+        "imdb_id": "tt1744776",
+        "title": "Legend of the BoneKnapper Dragon",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1287845",
+        "title": "Kung Fu Panda: Secrets of the Furious Five",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt4191768",
+        "title": "Dragons: Dawn of the Dragon Racers",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1526300",
+        "title": "Merry Madagascar",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Português"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0484439",
+        "title": "The Madagascar Penguins in a Christmas Caper",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0360985",
+        "title": "The Ghost of Lord Farquaad",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1725156",
+        "title": "Scared Shrekless",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2702348",
+        "title": "Madly Madagascar",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1980162",
+        "title": "Kung Fu Panda: Secrets of the Masters",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1702433",
+        "title": "Kung Fu Panda Holiday",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2065968",
+        "title": "Dragons: Gift of the Night Fury",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt6645614",
+        "title": "Trolls Holiday",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Trolls Holiday Collection"
+    },
+    {
+        "imdb_id": "tt15720718",
+        "title": "Trolls Holiday in Harmony",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America",
+            "Australia"
+        ],
+        "spoken_languages": [
+            "English",
+            "Português"
+        ],
+        "status": "Released",
+        "is_sequel": true,
+        "collection_name": "Trolls Holiday Collection"
+    },
+    {
+        "imdb_id": "tt2113625",
+        "title": "Book of Dragons",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1847645",
+        "title": "Megamind: The Button of Doom",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt5513770",
+        "title": "Kung Fu Panda: Secrets of the Scroll",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0438844",
+        "title": "Far Far Away Idol",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": null,
+        "title": "The Boss Baby 3",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America",
+            "France"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "In Production",
+        "is_sequel": true,
+        "collection_name": "The Boss Baby Collection"
+    },
+    {
+        "imdb_id": "tt1830577",
+        "title": "Donkey's Christmas Shrektacular",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1482967",
+        "title": "Mutant Pumpkins from Outer Space",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt8013970",
+        "title": "Bilby",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "No Language"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0307461",
+        "title": "Shrek in the Swamp Karaoke Dance Party",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2087984",
+        "title": "The Pig Who Cried Werewolf",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt2090578",
+        "title": "Night of the Living Carrots",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0233508",
+        "title": "CyberWorld",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "Canada",
+            "France",
+            "Germany",
+            "Japan",
+            "United Kingdom",
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt1542599",
+        "title": "B.O.B.'s Big Break",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "Deutsch",
+            "Français",
+            "English",
+            "Português"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt5091774",
+        "title": "Club Oscar",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt3419296",
+        "title": "Sinbad and the Cyclops Island",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0937397",
+        "title": "Hammy's Boomerang Adventure",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America",
+            "United Kingdom"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt3597380",
+        "title": "Almost Home",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt20878700",
+        "title": "Maraschino Ruby",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt5981706",
+        "title": "Kung Fu Panda: Panda Paws",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt3276714",
+        "title": "Rocky and Bullwinkle",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt27384764",
+        "title": "The Trident",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English",
+            "Español"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt32214143",
+        "title": "Gabby’s Dollhouse: The Movie",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "In Production",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt11952320",
+        "title": "To: Gerard",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt8865090",
+        "title": "Marooned",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "No Language"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": null,
+        "title": "Untitled The Wild Robot Sequel",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Planned",
+        "is_sequel": true,
+        "collection_name": "The Wild Robot Collection"
+    },
+    {
+        "imdb_id": "tt7674192",
+        "title": "Bird Karma",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "No Language"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt13972044",
+        "title": "Dear Diary: World's First Pranks",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt0783521",
+        "title": "First Flight",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "",
+        "title": "Larrikins",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Canceled",
+        "is_sequel": false,
+        "collection_name": null
+    },
+    {
+        "imdb_id": "tt21270956",
+        "title": "Trolls: Trolla-Palooza Tour",
+        "revenue": 0,
+        "budget": 0,
+        "production_countries": [
+            "United States of America"
+        ],
+        "spoken_languages": [
+            "English"
+        ],
+        "status": "Released",
+        "is_sequel": false,
+        "collection_name": null
+    }
+]

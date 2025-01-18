@@ -18,10 +18,10 @@ url = f"https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={query
 response = requests.get(url)
 data = response.json()
 
-# Lista para armazenar os dados dos filmes
+# lista para armazenar os dados dos filmes
 filmes = []
 
-# Processa os resultados retornados pela API
+# processando os resultados retornados pela API
 if "results" in data:
     for movie in data['results']:
         df = {
@@ -33,7 +33,7 @@ if "results" in data:
         }
         filmes.append(df)
 
-# Cria um DataFrame com os dados coletados
+# criando um DataFrame com os dados coletados
 df = pd.DataFrame(filmes)
 
 display(df)
