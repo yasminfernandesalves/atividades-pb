@@ -150,7 +150,12 @@ Iniciando a busca para saber quantas paginas de resultados o mtmdb possui para o
 ```
 
 
-Processamento da requisição pagina
+Realizando o processamento página por página, fazendo requisições a partir dos resultados dessas páginas e interromper a requisição caso não houver mais páginas ou se o resultado esteja inválido.
+E então processando as informações dos filmes, iterando os resultados das páginas, validando se o filme possuí um id e obtendo os detalhes do filme e salvando essas informações no dicionário "movie_data".
+Uma função final que a cada lote de 100 filmes, definido por batch_size, ele salva os dados no s3.
+
+Para os dados puxados da api, decidi trazer informações complementares ao csv e necessárias para responder minhas perguntas da análise, além disso, puxei o id do imdb e titulo que se repete no arquivo csv pois o nosso instrutor das reuniões tecnicas
+ nos deu o toque para ter alguma informação em comum para realizar o join dos dois arquivos em sprints futuras na construção do dataframe.
 
 ```python
 while page <= total_pages:
@@ -197,12 +202,15 @@ while page <= total_pages:
 ```
 
 
+função para salvar as informações após processar todas as páginas
 
 ```python
     if movie_details:
         save_to_s3(movie_details, bucket_name, batch_count)
 ```
 
+
+E por fim, a função principal do lambda "lambda_handler" que puxa o nome do bucket a partir da variável de ambiente, chama a função "fetch_dreamworks_movies" e retorna o resultado de sucesso ou o erro caso haja algum problema no processo
 
 ```python
 def lambda_handler(event, context):
@@ -227,10 +235,14 @@ def lambda_handler(event, context):
 
 [...]
 
+**Considerações**:
 
-            Inicialmente o script era bem menos complexo e mais direto ao ponto, porém tive que acrescentar algumas mudanças, principalmente sobre a questão de paginação, porque ele só estava retornando um lote de 100 filmes porque não estava conseguindo acessar as outras paginas de resultados para dreamworks, então aparecia erros informando sobre isso. A partir disso fiz uma pesquisa sobre como funciona essa questão de paginas e realizei as mudanças necessárias para ele acessar todas elas sem problemas.
+           Inicialmente, o script era bem mais simples e direto ao ponto. No entanto, tive que fazer algumas mudanças, principalmente relacionadas à questão da paginação. O problema era que o script estava retornando apenas um lote de 100 filmes, pois não conseguia acessar as outras páginas de resultados para os filmes da DreamWorks. Isso gerava erros indicando que os resultados estavam incompletos.
+           
+           Após identificar essa limitação, realizei uma pesquisa para entender melhor como a paginação funciona na API do TMDB. Com base nisso, implementei as alterações necessárias para que o script conseguisse acessar todas as páginas de resultados de forma correta, eliminando os problemas e garantindo que todos os dados fossem recuperados sem falhas.
 
 [...]
+
 
 
 ## **Criando Layer**

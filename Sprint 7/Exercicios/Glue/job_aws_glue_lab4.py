@@ -5,8 +5,8 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
-## @params: [JOB_NAME]
-args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+## @params: 
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
 
 sc = SparkContext()
 glueContext = GlueContext(sc)
@@ -32,9 +32,6 @@ df = df_dynamic.toDF()
 
 # transformações
 df = df.withColumn("nome", upper(col("nome")))
-
-# Estatísticas e análises (como no exemplo anterior)
-# ...
 
 # gravando no S3
 target_output = target_path + "/frequencia_registro_nomes_eua"
