@@ -1,17 +1,23 @@
 # Resumo
 
+Essa Sprint 08 não tivemos nenhum conteúdo obrigatório para consumir, somente uma sugestão de vídeos informativos sobre o Glue, Athena e Quicksight da AWS, o que foi ótimo para realizar o desafio com mais calma, pois foi um pouco desafiador, pelo menos para mim.
 
-[...]
+Como só tivemos contato com o Glue a partir do execício da sprint anterior, utilizei grande parte das informações desse laboratório para realizar o desafio. Num geral, foi interessante explorar mais sobre os serviços da AWS e como montar o meu próprio database para minha análise.
+
+Também busquei por mais informações sobre a estrutura de um data lake e como funciona as questões das camadas e de como realizar uma estrutura confiável.
 
 
 # Exercícios
 
 ### **Geração e massa de dados**
 
-| Warm Up | Geração do dataset |
-|---------|--------------------|
-| [script warmup.py](../Sprint%208/Exercicios/Geracao_massa_de_dados/warmUp.py) | [script geração do dataset de nomes de pessoas](../Sprint%208/Exercicios/Geracao_massa_de_dados/gerar_dataset_nomes.py) |
-| [resultado animais.csv](../Sprint%208/Exercicios/Geracao_massa_de_dados/warmup_animais.csv) | [resultado contendo todos os nomes em um arquivo txt (compactado)](../Sprint%208/Exercicios/Geracao_massa_de_dados/nomes_aleatorios.zip) |
+
+- Warm Up:
+    [script warmup.py](../Sprint%208/Exercicios/Geracao_massa_de_dados/warmUp.py) & [resultado animais.csv](../Sprint%208/Exercicios/Geracao_massa_de_dados/warmup_animais.csv)
+
+
+- Massa de dados:
+    [script geração do dataset de nomes de pessoas](../Sprint%208/Exercicios/Geracao_massa_de_dados/gerar_dataset_nomes.py) & [resultado contendo todos os nomes em um arquivo txt (compactado)](../Sprint%208/Exercicios/Geracao_massa_de_dados/nomes_aleatorios.zip) 
 
 
 
@@ -19,7 +25,9 @@
 
 
 
-- [códigos de cada etapa](../Sprint%208/Exercicios/Spark/ex_spark.ipynb) -> Utilizei o Google Colab por ser uma forma mais simple e rápida de configurar. 
+- [script com cada etapa](../Sprint%208/Exercicios/Spark/ex_spark.py)  
+
+*(Utilizei o Google Colab por ser uma forma mais simple e rápida de configurar, mas exportei o arquivo como um script python .py)* 
 
 
 ### **TMDB**

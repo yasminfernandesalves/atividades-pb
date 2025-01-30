@@ -1,6 +1,6 @@
 # Desafio Final
 
-Como dito na sprint anterior, minha análise é direcionada aos filmes da Dreamworks Animation. Uma análise focada em como continuações impactam na opnião do público e se vale a pena continuar investindo em coleções ao invés de filmes originais. 
+Como informado na sprint anterior, minha análise é direcionada aos filmes da Dreamworks Animation. Uma análise focada em como continuações impactam na opnião do público geral e se vale a pena continuar investindo em coleções ao invés de filmes originais. 
 
 Perguntas:
 
@@ -12,7 +12,7 @@ Perguntas:
 
 - *Qual é a média de avaliações de histórias originais em comparação com continuações e adaptações?*
 
-Para responder essas perguntas só ingeri dados da API do TMDB para complementar o arquivo CSV disponibilizado.
+Para responder essas perguntas, ingeri somente dados da API do TMDB para complementar o arquivo CSV disponibilizado.
 
 [...]
 
@@ -27,7 +27,7 @@ Nessa entrega foi pedido para gerar uma visão padronizada dos dados, do S3, dis
 
      1.1.  Arquivo contendo o código Python no formato .PY representando o código AWS Glue para CSV
 
-     1.2. Arquivo contendo o código Python no formato .PY representando o código AWS Glue para CSV
+     1.2. Arquivo contendo o código Python no formato .PY representando o código AWS Glue para JSON
 
 2. Markdown com a explicação das etapas executadas e evidências
 
@@ -60,11 +60,15 @@ Nessa entrega foi pedido para gerar uma visão padronizada dos dados, do S3, dis
 
     2.3. [Resultado Athena](#acessando-via-athena-1)
 
+
+[...]
+
+
 # Processamento da Camada **Trusted**
 
-Essa camada seria equivalente a camada SILVER de um data lake bem estruturado, onde os dados coletados na camada Raw são processados, realizando a limpeza e normalização desses dados brutos para um consumo futuro.
+Essa camada é equivalente a camada SILVER de um data lake bem estruturado, onde os dados coletados na camada Raw são processados, limpos e normalizados para oferecem uma maior facilidade para o consumo futuro.
 
-Para essa sprint, foi pedido para transformar os arquivos JSON e CSV para o tipo PARQUET pois é um formato que não consome tantos recursos no momento de realizar as consultas no Athena. Para isso, desenvolvi dois scripts python pelo AWS Glue para limpar é transformar esses dados como pedido nas orientações do desafio.
+Para essa sprint, foi pedido para transformar os arquivos JSON e CSV para o tipo PARQUET pois é um formato que não consome tantos recursos no momento de realizar as consultas no Athena. Para isso, desenvolvi dois scripts python pelo AWS Glue para limpar e transformar esses dados como pedido nas orientações do desafio.
 
 
 [...]
@@ -83,6 +87,7 @@ Para essa sprint, foi pedido para transformar os arquivos JSON e CSV para o tipo
 
 
 [...]
+
 
 # Processando o Arquivo local (CSV)
 
@@ -201,7 +206,7 @@ Arquivos **PARQUET**:
 - Código: [Script do Job ](../Desafio/entrega-3/RawTmdbParaTrusted.py)
 
 
-Utilizando a estrutura padrão novamente, mas acrecentando as classes dos tipos de dados da biblioteca do *pyspark.sql.types*. Adicionando os caminhos nos parâmetros do job. 
+Utilizando a estrutura padrão novamente, mas acrescentando as classes dos tipos de dados da biblioteca do *pyspark.sql.types*. Adicionando os caminhos nos parâmetros do job. 
 
 >**TRUSTED_PATH**: *s3://bucket/Trusted/TMDB/Parquet/movies/Ano/Mes/Dia/*
 
