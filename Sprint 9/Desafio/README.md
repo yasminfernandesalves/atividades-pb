@@ -93,6 +93,7 @@ A partir do modelo que eu defini, desenvolvi o script no glue para criar as tabe
 - código: [Job do Glue](../Desafio/entrega-4/JobDreamworksRefined.py)
 
 
+Importando as bibliotecas necessárias para o funcionamento das funções
 
 ```python
 import sys
@@ -106,6 +107,9 @@ from pyspark.sql.functions import col, when, row_number, lit
 from pyspark.sql.types import IntegerType, DecimalType
 from pyspark.sql.window import Window
 ```
+
+
+Iniciando a seção Spark e passando os parâmetros dos caminhos, como os inputs da camada Trusted (local e TMDB) e o caminho para a saída dos resultados, a camada Refined.
 
 ```python
 args = getResolvedOptions(sys.argv, ['JOB_NAME', 'LOCAL_PATH', 'TMDB_PATH', 'REFINED_PATH'])
@@ -121,6 +125,7 @@ input_tmdb = args['TMDB_PATH']
 output_refined = args['REFINED_PATH']
 ```
 
+Lendo os arquivos da camada trusted como dataframes e excluindo as duplicatas dos dados locais basendo-se no ID, porque os dados desses arquivos estão particionados atores dos filmes, o que faz o id de um filme aparecer mais de uma vez. E criando a tabela de dimensão para as coleções de filmes e adicionando um id (identificado único) para essas coleções com a função "row_number()" dentro de uma janela ordenada por nome.
 
 ```python
 local_df = spark.read.parquet(input_local).dropDuplicates(['id'])
@@ -136,6 +141,7 @@ dim_colecao = (
 ```
 
 
+Realizando um JOIN interno entre o "local_df" e "tmdb_df" usando os id's do imdb que os dois dataframes possuem, assim permanecendo somente os filmes da dreamworks. E então criando a tabela de dimensão para os titulos dos filmes, sem duplicatas, e atribuindo um id para eles utilizando o "row_number" novamente.
 
 ```python
 filmes_filtrados = local_df.join(tmdb_df, local_df.id == tmdb_df.imdb_id, "inner")
@@ -150,6 +156,7 @@ dim_titulos = (
 ```
 
 
+Criando a tabela fato dos filmes unindo as dimensões criadas e os filmes filtrados da dreamworks. Converti os tipos das colunas de receita, orçamento, ano de lançamento para evitar erros e transformando os dados da coluna que afirma se o filmes é continuação de "True"/"False" para "1"/"0" para manter a fato com somente colunas numéricas.
 
 ```python
 # tabela FATO
@@ -170,6 +177,7 @@ fato_filmes = (
 ```
 
 
+Escrevendo as tabelas como arquivos parquet na camada refined e dentro de uma pasta com o nome da tabela, e salvando a fato_filmes particionado pela coluna de ano do lançamento para facilitar nas consultas temporais.
 
 ```python
 fato_filmes.write.partitionBy("ano_lancamento").parquet(f"{output_refined}/fato_filmes", mode='overwrite')
@@ -184,7 +192,12 @@ job.commit()
 
 ### Executando o Job
 
+- Antes de qualquer coisa criei um database no *AWS Lake Formation* com o nome "dreamworksRefined" utilizando a mesma função do *I AM* que criei na sprint passada com o nome "GlueDesafioFinal". 
+
 ![alt](../Evidencias/criando-database.png)
+
+
+- Executei o Job com as configurações pedidas nas instruções, e após alguns pequenos ajustes ele foi executado com sucesso.
 
 ![alt](../Evidencias/exc-job-glue.png)
 
@@ -192,6 +205,7 @@ job.commit()
 
 ### Estrutura do Bucket
 
+- Caminho das pastas criadas com a execução do Job:
 
 ![alt](../Evidencias/bucket-1.png)
 
@@ -207,22 +221,38 @@ job.commit()
 
 ### Crawler
 
+- Criei um crawler apontando para a camada Refined, criando as três tabelas 
+
 ![alt](../Evidencias/criando-crawler.png)
 
+
+- Execução bem sucedido
+
 ![alt](../Evidencias/exec-crawler.png)
+
+
+- E as tabelas já aparecem no database dreamworksRefined:
 
 ![alt](../Evidencias/tabelas.png)
 
 
 ### Athena
 
+- Visualizando a tabela dim_colecao:
 
 ![alt](../Evidencias/athena-dim-colecao.png)
+
+
+- Visualizando a tabela dim_titulo:
 
 ![alt]()
 
 
+- Quando eu visualizei a tabela fato na primeira execução percebi que o formato dos dados de receita e orçamento estavam estranhos, então voltei para o job e defini o tipo das duas colunas como ".cast(DecimalType(18, 2))"
+
 ![alt](../Evidencias/athena-fato-erro-dados.png)
 
+
+- Após executar o job depois de definir o tipo como decimal eles já apareceram normalmente na tabela:
 
 ![alt](../Evidencias/athena-fato-filmes-corrigido.png)
