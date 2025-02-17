@@ -7,6 +7,16 @@ Criar no AWS Glue Catalog as tabelas e, se necessário, views, de acordo com mod
 
 # Etapas
 
+- [Contextualização / Minha análise](#contextualização)
+
+- [Preparação para a Modelagem](#preparação-para-a-modelagem)
+
+- [Modelagem Multidimensional](#modelagem-multidimensional)
+
+- [Processamento da camda Refined](#processamento-da-camada-refined)
+
+
+[...]
 
 # Contextualização
 
