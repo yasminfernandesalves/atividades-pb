@@ -52,13 +52,13 @@ Nessa entrega foi pedido para gerar uma visão padronizada dos dados, do S3, dis
 
 3. [Processamento o arquivo do TMDB (JSON)](#processando-o-arquivo-do-tmdb-json)
 
-    2.1. [Execução do Job](#execução-do-job-1)
+    3.1. [Execução do Job](#execução-do-job-1)
 
-    2.1.1. [Estrutura das pastas](#criação-das-pastas-1)
+    3.1.1. [Estrutura das pastas](#criação-das-pastas-1)
 
-    2.2. [Criação do Crawler](#criação-do-crawler-1)
+    3.2. [Criação do Crawler](#criação-do-crawler-1)
 
-    2.3. [Resultado Athena](#acessando-via-athena-1)
+    3.3. [Resultado Athena](#acessando-via-athena-1)
 
 
 [...]
