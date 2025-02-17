@@ -255,7 +255,7 @@ job.commit()
 
 - Visualizando a tabela dim_titulo:
 
-![alt]()
+![alt](../Evidencias/athena-dim-titulos.png)
 
 
 - Quando eu visualizei a tabela fato na primeira execução percebi que o formato dos dados de receita e orçamento estavam estranhos, então voltei para o job e defini o tipo das duas colunas como ".cast(DecimalType(18, 2))"
